@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5; /*Line of space betwen each line*/
+    /* font: 15px/1.5; Arial, Helvetica, sans-serif; Ovo je precica ya ovo gore sto smo napisali*/
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/*Global*/
+.container {
+    width: 80%; /*Stavljamo 80% jer zelimo da bude full responsive, zato ne ogranicavamo na piksele*/
+    margin: auto; /*Ovo ce postaviti sve elemente ka sredini*/
+    overflow: hidden; /*Ako nesto izadje van Div-a, dok skrolujemo, zelimo da sakrijemo, da nesto ne predje preko te vrednosti*/
+}
+
+ul { /*Da bi smo napravili meni da stoji horizontalno, da bi smo izbrisali bulete, po difoltu ul lista ima padding*/
+    margin: 0; 
+    padding: 0;
+}
+
+.button_1 {
+    height: 38px;
+    background-color: #e8491d;
+    border: none; /*Po difoltu button ima border, pa ga skidamo ovde*/
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.dark {
+    padding: 15px;
+    background-color: #35424a;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+/*Header*/
+header {
+    background-color: #35424a;
+    color: #fff;
+    padding: 30px;
+    min-height: 70px; /*Kada sajt postane responsive, kada je ekran manji, a tekst se pomera u narednu liniju, zelimo da se visina sama podesva*/
+    border-bottom: #e8491d 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px; /*TOP - RIGHT - BOTTOM - LEFT*/
+}
+
+header #brending {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 5px;
+}
+
+header .hightlight, header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/*Showcase*/
+#showcase {
+    min-height: 400px;
+    background: url('../img/showcase.jpg') no-repeat 0 -400px; /*Posto ne zelimo da se slika ponavlja (Sto mi nije jasno)**Po difoltu nam stavlja sliku u ful size-u, stavljamo 0 (horizontalna vrednost slike u pikselima), pa da bi je pomerili ka gore vertikalno, stavljamo -400px (vertikalna vrednost*/
+    text-align: center;
+    color: #fff;
+}
+
+#showcase h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p {
+    font-size: 20px;
+}
+
+/* Newsletter */
+#newsletter {
+    padding: 15px;
+    color: #ffffff;
+    background-color: #35424a;
+}
+
+#newsletter h1 {
+    float: left;
+}
+
+#newsletter form {
+    float: right;
+    margin-top: 15px;
+}
+
+#newsletter input[type="email"] { /*[] Ove zagrade koristimo u CSS3 da gadjamo element direktno, da kazemo input koji ima tip emejla*/
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+/* Boxes */
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes .box {
+    float: left; /*Da bi smo svaki box pogodili, float da idu na levo, width 30% jer je sajt responsive*/
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+#boxes .box img {
+    width: 90px; /*Zato sto zelimo da nam sliku budu manjeg formata*/
+}
+
+/* Sidebar */
+
+aside#sidebar { /* Ovde smo mogli da upisemo samo ID jer nemamo niti jedan drugi sa istim imenom */
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea {
+    width: 90%;
+    padding: 5px;
+
+}
+
+/* main-col */
+
+article#main-col { /* Ovde smo mogli da upisemo samo ID jer nemamo niti jedan drugi sa istim imenom */
+    float: left;
+    width: 65%;
+}
+
+/* Services */
+
+ul#services li {
+    list-style: none;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* Sada pravimo da dobro izgleda sajt na mobilnom uredjaju (w3schools.com/cssref/css3_pr_mediaquery.asp), standard size is 768px, kao npr. za tablet, i sve sto pisemo unutar zagrade, bice primenljivo kada je ekran te velicine. */
+
+@media (max-width: 768px) {
+    header #branding, header nav, header nav li, #newsletter h1, #newsletter form, #boxes .box, article#main-col, aside#sidebar {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+
+    #showcase h1 {
+        margin-top: 40px; /* Jer je po difoltu za ovakce ekrane 100px */
+    }
+
+    #newsletter button, .quote button{ /* Ovde blokiramo button, kada je prozor smanjen, dugme uvek ide u istoj liniji sa poljem za tekst. */
+        display: block;
+        width: 100%;
+    }
+
+    #newsletter form input[type="email"], .quote input, .quote textarea {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/

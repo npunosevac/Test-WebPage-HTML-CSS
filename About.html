@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"> Ovo jos uvek ne znam sta znaci, zato je u komentaru-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ovaj deo elemenata predstavlja elemente za responsive web site, da mozemo da ga vidimo na tabletu, mobilnom tel itd...-->
+    <meta name="description" content="Affordable and professional web design"> <!--Ovaj deo je za SEO optimizaciju, podaci-->
+    <meta name="keywords" content="web design, affordable web design, professional web design"> <!--Ovaj deo je za SEO optimizaciju, podaci-->
+    <meta name="author" content="Nikola Punosevac"> <!--Ovaj deo je za SEO optimizaciju, podaci-->
+    <title>Acme Web Design | About</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="hightlight">Acme</span> Web Design</h1> <!--Soan je inline element-->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li class="current"><a href="About.html">About</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="newsletter">
+        <div class="container">
+            <h1>Subscribe To Our Newsletter</h1>
+            <form> <!--Da bi form radio, mora da se uvaci form="process.php, ali to sada nema poente pisati"-->
+                <input type="email" placeholder="Enter email">
+                <button type="submit" class="button_1">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="container">
+            <article id="main-col">
+                <h1 class="page-title">About Us</h1>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor neque non felis placerat, ac placerat enim pellentesque. Curabitur sit amet velit ante. Proin at turpis non orci maximus volutpat. Praesent risus ipsum, consequat sit amet augue sed, accumsan vulputate dolor. Nam mollis velit diam, a fringilla leo convallis molestie. Pellentesque vitae lacinia metus, id tincidunt lectus. Maecenas congue aliquam mauris sed pulvinar.
+                </p>
+                <p class="dark">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+                </p>
+            </article>
+
+            <aside id="sidebar">
+                <div class="dark">
+                    <h3>What We Do</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.</p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <p>Acme Web Design, Copyright &copy; 2021, by Nikola Punosevac</p>
+    </footer>
+</body>
+</html>
